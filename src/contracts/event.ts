@@ -72,7 +72,7 @@ export class Event extends SmartContract {
         // Verify signature
         assert(this.checkSig(userSig, user), 'Invalid signature')
         
-        this.yesShares.set(user, currentShares + amount)
+        this.yesShares.set(user, amount)
         
         // Update total shares
         this.totalYesShares += amount
